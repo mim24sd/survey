@@ -1,1 +1,19 @@
+@import "../../../assests/variables.module.scss";
 
+.confirmButton {
+  padding: 5px 10px;
+  border-width: 0px;
+  border-radius: 3px;
+  background-color: $tertiary-color;
+  color: $background-secondary-color;
+  font-size: 1em;
+}
+
+.primaryButton {
+  padding: 5px 10px;
+  border-width: 0px;
+  border-radius: 3px;
+  background-color: $primary-color;
+  color: $background-secondary-color;
+  font-size: 1em;
+}

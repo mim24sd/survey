@@ -1,51 +1,34 @@
+import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainLayout from "./pages/MainLayout";
+import MainLayout from "./pages/MainLayout/index.jsx";
+import styles from "./styles.module.scss";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<MainLayout title="Personal information" />} />
         <Route
-          path="/"
-          element={<MainLayout title="Personal information"></MainLayout>}
+          path="/programminglanguages"
+          element={<MainLayout title="Programming languages" />}
+        />
+        <Route path="/coding" element={<MainLayout title="Coding" />} />
+        <Route
+          path="/socialMedia"
+          element={<MainLayout title="Social Media" />}
+        />
+        <Route path="/comment" element={<MainLayout title="Comment" />} />
+        <Route path="/occupation" element={<MainLayout title="Occupation" />} />
+        <Route
+          path="/contantInformation"
+          element={<MainLayout title="Contant Information" />}
         />
         <Route
-          path="/question2"
-          element={<MainLayout title="Programming languages"></MainLayout>}
+          path="/confirmInformation"
+          element={<MainLayout title="Confirm Information" />}
         />
-        <Route
-          path="/question3"
-          element={<MainLayout title="Coding"></MainLayout>}
-        />
-        <Route
-          path="/question4"
-          element={<MainLayout title="Coding"></MainLayout>}
-        />
-        <Route
-          path="/question5"
-          element={<MainLayout title="Social Media"></MainLayout>}
-        />
-        <Route
-          path="/question6"
-          element={<MainLayout title="Comment"></MainLayout>}
-        />
-        <Route
-          path="/question7"
-          element={<MainLayout title="Occupation"></MainLayout>}
-        />
-        <Route
-          path="/question8"
-          element={<MainLayout title="Contant Information"></MainLayout>}
-        />
-        <Route
-          path="/confirm"
-          element={<MainLayout title="Confirm Information"></MainLayout>}
-        />
-        <Route
-          path="/success"
-          element={<MainLayout title="Success"></MainLayout>}
-        />
+        <Route path="/success" element={<MainLayout title="Success" />} />
       </Routes>
     </BrowserRouter>
   );

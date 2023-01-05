@@ -1,0 +1,9 @@
+@import "./assests/variables.module.scss";
+@import "./assests/reset.module.scss";
+
+body {
+  background-color: $background-primary-color;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}

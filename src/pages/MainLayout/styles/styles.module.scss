@@ -1,1 +1,13 @@
+@import "../../../assests/variables.module.scss";
 
+.main {
+  background-color: $background-secondary-color;
+  width: 600px;
+  padding: 2em;
+  border-radius: 5px;
+}
+
+.header {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
