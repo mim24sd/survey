@@ -10,22 +10,22 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainLayout title="Personal information" />} />
         <Route
-          path="/programminglanguages"
+          path="/programming_languages"
           element={<MainLayout title="Programming languages" />}
         />
         <Route path="/coding" element={<MainLayout title="Coding" />} />
         <Route
-          path="/socialMedia"
+          path="/social_media"
           element={<MainLayout title="Social Media" />}
         />
         <Route path="/comment" element={<MainLayout title="Comment" />} />
         <Route path="/occupation" element={<MainLayout title="Occupation" />} />
         <Route
-          path="/contantInformation"
+          path="/contant_information"
           element={<MainLayout title="Contant Information" />}
         />
         <Route
-          path="/confirmInformation"
+          path="/confirm_information"
           element={<MainLayout title="Confirm Information" />}
         />
         <Route path="/success" element={<MainLayout title="Success" />} />

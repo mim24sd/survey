@@ -2,16 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/styles.module.scss";
 
-const Button = ({ title, path }) => {
+const Button = ({ text, path, type }) => {
   let buttonStyle = styles.primaryButton;
 
-  if (title === "Confirm") {
+  if (type === "success") {
     buttonStyle = styles.confirmButton;
   }
 
   return (
     <Link to={path}>
-      <button className={buttonStyle}>{title}</button>
+      <button className={buttonStyle}>{text}</button>
     </Link>
   );
 };
