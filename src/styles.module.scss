@@ -7,3 +7,16 @@ body {
   place-items: center;
   min-height: 100vh;
 }
+
+h1,
+a,
+p,
+li,
+input {
+  font-family: $font-primary;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
