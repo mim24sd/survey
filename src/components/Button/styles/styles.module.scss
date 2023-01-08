@@ -1,6 +1,6 @@
 @import "../../../assests/variables.module.scss";
 
-.confirmButton {
+.button {
   padding: 5px 10px;
   border-width: 0px;
   border-radius: 3px;
@@ -9,11 +9,10 @@
   font-size: 1em;
 }
 
-.primaryButton {
-  padding: 5px 10px;
-  border-width: 0px;
-  border-radius: 3px;
+.primary {
   background-color: $primary-color;
-  color: $background-secondary-color;
-  font-size: 1em;
+}
+
+.success {
+  background-color: $tertiary-color;
 }

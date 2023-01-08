@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import styles from "./styles/styles.module.scss";
 
 const Button = ({ text, path, type }) => {
-  let buttonStyle = styles.primaryButton;
+  let buttonStyle = styles.primary;
 
   if (type === "success") {
-    buttonStyle = styles.confirmButton;
+    buttonStyle = styles.success;
   }
 
   return (
     <Link to={path}>
-      <button className={buttonStyle}>{text}</button>
+      <button className={[buttonStyle, styles.button].join(" ")}>{text}</button>
     </Link>
   );
 };
