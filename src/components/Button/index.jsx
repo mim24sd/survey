@@ -2,16 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/styles.module.scss";
 
-const Button = ({ text, path, type }) => {
-  let buttonStyle = styles.primary;
+const Button = ({ path, type, children }) => {
+  let buttonStyle = styles.button;
 
   if (type === "success") {
-    buttonStyle = styles.success;
+    buttonStyle = `${buttonStyle} ${styles.success}`;
   }
 
   return (
     <Link to={path}>
-      <button className={[buttonStyle, styles.button].join(" ")}>{text}</button>
+      <button className={buttonStyle}> {children}</button>
     </Link>
   );
 };

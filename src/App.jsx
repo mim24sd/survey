@@ -13,12 +13,12 @@ const App = () => {
           element={
             <MainLayout
               title="Personal information"
-              nextPath="/programming_languages"
+              nextPath="/programming-languages"
             />
           }
         />
         <Route
-          path="/programming_languages"
+          path="/programming-languages"
           element={
             <MainLayout
               title="Programming languages"
@@ -32,13 +32,13 @@ const App = () => {
           element={
             <MainLayout
               title="Coding"
-              previousPath="/programming_languages"
-              nextPath="/social_media"
+              previousPath="/programming-languages"
+              nextPath="/social-media"
             />
           }
         />
         <Route
-          path="/social_media"
+          path="/social-media"
           element={
             <MainLayout
               title="Social Media"
@@ -52,7 +52,7 @@ const App = () => {
           element={
             <MainLayout
               title="Comment"
-              previousPath="/social_media"
+              previousPath="/social-media"
               nextPath="/occupation"
             />
           }
@@ -63,26 +63,26 @@ const App = () => {
             <MainLayout
               title="Occupation"
               previousPath="/comment"
-              nextPath="/contant_information"
+              nextPath="/contant-information"
             />
           }
         />
         <Route
-          path="/contant_information"
+          path="/contant-information"
           element={
             <MainLayout
               title="Contant Information"
               previousPath="/occupation"
-              nextPath="/confirm_information"
+              nextPath="/confirm-information"
             />
           }
         />
         <Route
-          path="/confirm_information"
+          path="/confirm-information"
           element={
             <MainLayout
               title="Confirm Information"
-              previousPath="/contant_information"
+              previousPath="/contant-information"
               nextPath="/success"
             />
           }

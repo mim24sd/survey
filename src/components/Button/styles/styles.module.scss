@@ -4,15 +4,11 @@
   padding: $space-md $space-lg;
   border-width: 0;
   border-radius: $space-md;
-  background-color: $tertiary-color;
   color: $background-secondary-color;
-  font-size: $size-md;
-}
-
-.primary {
   background-color: $primary-color;
-}
+  font-size: $size-md;
 
-.success {
-  background-color: $tertiary-color;
+  &.success {
+    background-color: $tertiary-color;
+  }
 }

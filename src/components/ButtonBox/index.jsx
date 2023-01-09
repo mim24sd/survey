@@ -11,28 +11,22 @@ const ButtonBox = ({
   nextPath,
 }) => {
   let buttonBox = (
-    <div className={styles.one_button_box}>
-      <Button
-        text={nextButtonText}
-        type={nextButtonType}
-        path={nextPath}
-      ></Button>
+    <div className={styles.next_button}>
+      <Button type={PreviousButtonType} path={previousPath}>
+        {PreviousButtonText}
+      </Button>
     </div>
   );
 
   if (previousPath !== undefined) {
     buttonBox = (
-      <div className={styles.two_button_box}>
-        <Button
-          text={PreviousButtonText}
-          type={PreviousButtonType}
-          path={previousPath}
-        ></Button>
-        <Button
-          text={nextButtonText}
-          type={nextButtonType}
-          path={nextPath}
-        ></Button>
+      <div className={styles.next_and_prev_button}>
+        <Button type={PreviousButtonType} path={previousPath}>
+          {PreviousButtonText}
+        </Button>
+        <Button type={nextButtonType} path={nextPath}>
+          {nextButtonText}
+        </Button>
       </div>
     );
   }
