@@ -12,8 +12,8 @@ const ButtonBox = ({
 }) => {
   let buttonBox = (
     <div className={styles.next_button}>
-      <Button type={PreviousButtonType} path={previousPath}>
-        {PreviousButtonText}
+      <Button type={nextButtonType} path={nextPath}>
+        {nextButtonText}
       </Button>
     </div>
   );
