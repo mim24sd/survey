@@ -7,10 +7,10 @@ const TextInput = ({ title, minlength }) => {
 
   const handleInputValue = (event) => {
     if (event.target.value.length === 0) {
-      setInputStyle(`${inputStyle} ${styles.error}`);
+      setInputStyle(`${inputStyle} ${styles.error} ${styles.errorBox}`);
       setErrorText("can't be empty");
     } else if (event.target.value.length < 2) {
-      setInputStyle(`${inputStyle} ${styles.error}`);
+      setInputStyle(`${inputStyle} ${styles.error} ${styles.errorBox}`);
       setErrorText("must be at least 2 characters long");
     }
   };

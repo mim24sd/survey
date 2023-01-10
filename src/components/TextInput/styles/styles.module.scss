@@ -8,7 +8,7 @@
   display: block;
   width: 100%;
   padding: $size-sm;
-  margin: $size-sm 0;
+  margin: $size-sm 0 $size-md 0;
   border-color: $border-primary-color;
   border-radius: $space-md;
   border-width: $space-sm;
@@ -16,10 +16,13 @@
   &.error {
     border-color: $secondary-color;
   }
+  &.errorBox {
+    margin: $size-sm 0 0 0;
+  }
 }
 
 .errorText {
-  padding-left: $space-md;
   display: inline;
   color: $secondary-color;
+  padding-left: 0;
 }
