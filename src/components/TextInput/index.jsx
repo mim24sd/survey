@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import styles from "./styles/styles.module.scss";
 
-const TextInput = () => {
-  return <p>text input</p>;
+const TextInput = ({ title, minlength }) => {
+  let [inputStyle, setInputStyle] = useState(styles.input);
+  let [errorText, setErrorText] = useState("");
+
+  const handleInputValue = (event) => {
+    if (event.target.value.length === 0) {
+      setInputStyle(`${inputStyle} ${styles.error}`);
+      setErrorText("(can't be empty)");
+    } else if (event.target.value.length < 2) {
+      setInputStyle(`${inputStyle} ${styles.error}`);
+      setErrorText("(must be at least 2 characters long)");
+    }
+  };
+
+  return (
+    <label className={styles.label}>
+      {title} <p className={styles.errorText}>{errorText}</p>
+      <input
+        className={inputStyle}
+        type="text"
+        minlength={minlength}
+        required
+        onBlur={(event) => {
+          handleInputValue(event);
+        }}
+      />
+    </label>
+  );
 };
 
 export default TextInput;

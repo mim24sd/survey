@@ -1,0 +1,25 @@
+@import "../../../assests/variables.module.scss";
+
+.label {
+  margin: $size-md 0;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: $size-sm;
+  margin: $size-sm 0;
+  border-color: $border-primary-color;
+  border-radius: $space-md;
+  border-width: $space-sm;
+  border-style: solid;
+  &.error {
+    border-color: $secondary-color;
+  }
+}
+
+.errorText {
+  padding-left: $space-md;
+  display: inline;
+  color: $secondary-color;
+}

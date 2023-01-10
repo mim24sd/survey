@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonBox from "../../components/ButtonBox/index.jsx";
+import Questions from "../../components/Questions/index.jsx";
 import styles from "./styles/styles.module.scss";
 
 const MainLayout = ({ title, previousPath, nextPath }) => {
@@ -18,6 +19,7 @@ const MainLayout = ({ title, previousPath, nextPath }) => {
   return (
     <main className={styles.main}>
       <h1 className={styles.header}>{title}</h1>
+      <Questions />
       <ButtonBox
         PreviousButtonType={PreviousButtonType}
         PreviousButtonText={PreviousButtonText}
