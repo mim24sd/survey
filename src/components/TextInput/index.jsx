@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./styles/styles.module.scss";
 
 const TextInput = ({ title, minlength }) => {
@@ -8,16 +8,16 @@ const TextInput = ({ title, minlength }) => {
   const handleInputValue = (event) => {
     if (event.target.value.length === 0) {
       setInputStyle(`${inputStyle} ${styles.error}`);
-      setErrorText("(can't be empty)");
+      setErrorText("can't be empty");
     } else if (event.target.value.length < 2) {
       setInputStyle(`${inputStyle} ${styles.error}`);
-      setErrorText("(must be at least 2 characters long)");
+      setErrorText("must be at least 2 characters long");
     }
   };
 
   return (
     <label className={styles.label}>
-      {title} <p className={styles.errorText}>{errorText}</p>
+      {title}
       <input
         className={inputStyle}
         type="text"
@@ -27,6 +27,7 @@ const TextInput = ({ title, minlength }) => {
           handleInputValue(event);
         }}
       />
+      <p className={styles.errorText}>{errorText}</p>
     </label>
   );
 };
