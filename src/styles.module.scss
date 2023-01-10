@@ -2,7 +2,7 @@
 @import "./assests/reset.module.scss";
 
 body {
-  background-color: $background-primary-color;
+  background-color: $background-secondary-color;
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -20,4 +20,10 @@ label {
 a {
   cursor: pointer;
   text-decoration: none;
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    background-color: $background-primary-color;
+  }
 }
