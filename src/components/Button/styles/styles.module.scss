@@ -1,0 +1,14 @@
+@import "../../../assests/variables.module.scss";
+
+.button {
+  padding: $space-md $space-lg;
+  border-width: 0;
+  border-radius: $space-md;
+  color: $background-secondary-color;
+  background-color: $primary-color;
+  font-size: $size-md;
+
+  &.success {
+    background-color: $tertiary-color;
+  }
+}
