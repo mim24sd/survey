@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./pages/MainLayout/index.jsx";
-import styles from "./styles.module.scss";
+import "./styles.module.scss";
 
 const App = () => {
   return (
