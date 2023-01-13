@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PersonalInformation from "./components/PersonalInformation/index.jsx";
 import MainLayout from "./pages/MainLayout/index.jsx";
 import "./styles.module.scss";
 
@@ -14,7 +15,9 @@ const App = () => {
             <MainLayout
               title="Personal information"
               nextPath="/programming-languages"
-            />
+            >
+              <PersonalInformation />
+            </MainLayout>
           }
         />
         <Route

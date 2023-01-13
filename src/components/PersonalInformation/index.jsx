@@ -4,7 +4,7 @@ import DateInput from "../DateInput/index.jsx";
 import TextInput from "../TextInput/index.jsx";
 import styles from "./styles/styles.module.scss";
 
-const Questions = () => {
+const PersonalInformation = () => {
   const location = useLocation();
   let section = <ul></ul>;
 
@@ -26,4 +26,4 @@ const Questions = () => {
   return section;
 };
 
-export default Questions;
+export default PersonalInformation;
