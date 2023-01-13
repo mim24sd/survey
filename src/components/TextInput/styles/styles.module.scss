@@ -15,14 +15,10 @@
   border-style: solid;
   &.error {
     border-color: $secondary-color;
-  }
-  &.errorBox {
     margin: $size-sm 0 0 0;
   }
 }
 
 .errorText {
-  display: inline;
   color: $secondary-color;
-  padding-left: 0;
 }

@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import styles from "./styles/styles.module.scss";
 
 const TextInput = ({ label, minlength, isRequired = true }) => {
-  let [inputStyle, setInputStyle] = useState(styles.input);
+  // let [inputStyle, setInputStyle] = useState(styles.input);
   let [errorText, setErrorText] = useState("");
 
   const handleInputValue = (event) => {
     if (event.target.value.length === 0) {
-      setInputStyle(`${inputStyle} ${styles.error} ${styles.errorBox}`);
       setErrorText("can't be empty");
     } else if (event.target.value.length < 2) {
-      setInputStyle(`${inputStyle} ${styles.error} ${styles.errorBox}`);
       setErrorText("must be at least 2 characters long");
+    } else {
+      setErrorText("");
     }
   };
 
@@ -19,7 +19,7 @@ const TextInput = ({ label, minlength, isRequired = true }) => {
     <label className={styles.label}>
       {label}
       <input
-        className={inputStyle}
+        className={`${styles.input} ${errorText ? styles.error : ""}`}
         type="text"
         minlength={minlength}
         required
@@ -31,7 +31,7 @@ const TextInput = ({ label, minlength, isRequired = true }) => {
     <label className={styles.label}>
       {label}
       <input
-        className={inputStyle}
+        className={`${styles.input} ${errorText ? styles.error : ""}`}
         type="text"
         minlength={minlength}
         onBlur={handleInputValue}
