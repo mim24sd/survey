@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./styles/styles.module.scss";
 
-const TextInput = ({ title, minlength }) => {
+const TextInput = ({ label, minlength, isRequired = true }) => {
   let [inputStyle, setInputStyle] = useState(styles.input);
   let [errorText, setErrorText] = useState("");
 
@@ -15,9 +15,9 @@ const TextInput = ({ title, minlength }) => {
     }
   };
 
-  return (
+  let textInput = isRequired ? (
     <label className={styles.label}>
-      {title}
+      {label}
       <input
         className={inputStyle}
         type="text"
@@ -29,7 +29,22 @@ const TextInput = ({ title, minlength }) => {
       />
       <p className={styles.errorText}>{errorText}</p>
     </label>
+  ) : (
+    <label className={styles.label}>
+      {label}
+      <input
+        className={inputStyle}
+        type="text"
+        minlength={minlength}
+        onBlur={(event) => {
+          handleInputValue(event);
+        }}
+      />
+      <p className={styles.errorText}>{errorText}</p>
+    </label>
   );
+
+  return textInput;
 };
 
 export default TextInput;

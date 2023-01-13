@@ -12,13 +12,13 @@ const PersonalInformation = () => {
     section = (
       <ul className={styles.list}>
         <li>
-          <TextInput title="Name" minlength={2} />
+          <TextInput label="Name" minlength={2} isRequired={true} />
         </li>
         <li>
-          <TextInput title="Family" minlength={2} />
+          <TextInput label="Family" minlength={2} isRequired={true} />
         </li>
         <li>
-          <DateInput title="Birth Date" />
+          <DateInput label="Birth Date" isRequired={true} />
         </li>
       </ul>
     );
