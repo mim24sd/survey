@@ -23,9 +23,7 @@ const TextInput = ({ label, minlength, isRequired = true }) => {
         type="text"
         minlength={minlength}
         required
-        onBlur={(event) => {
-          handleInputValue(event);
-        }}
+        onBlur={handleInputValue}
       />
       <p className={styles.errorText}>{errorText}</p>
     </label>
@@ -36,9 +34,7 @@ const TextInput = ({ label, minlength, isRequired = true }) => {
         className={inputStyle}
         type="text"
         minlength={minlength}
-        onBlur={(event) => {
-          handleInputValue(event);
-        }}
+        onBlur={handleInputValue}
       />
       <p className={styles.errorText}>{errorText}</p>
     </label>
