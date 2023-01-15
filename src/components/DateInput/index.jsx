@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles/styles.module.scss";
 
-const DateInput = ({ title, isRequired }) => {
+const DateInput = ({ title, isRequired = true }) => {
   let dateInput = isRequired ? (
     <label className={styles.label}>
       {title}

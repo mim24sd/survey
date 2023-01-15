@@ -5,10 +5,12 @@ const TextInput = ({ label, minLength, isRequired = true }) => {
   let [errorText, setErrorText] = useState("");
 
   const handleInputValue = (event) => {
-    if (event.target.value.length === 0) {
-      setErrorText("can't be empty");
-    } else if (event.target.value.length < 2) {
-      setErrorText("must be at least 2 characters long");
+    const textLength = event.target.value.length;
+
+    if (textLength === 0) {
+      setErrorText("Can't be empty.");
+    } else if (textLength < { minLength }) {
+      setErrorText("Must be at least 2 characters Long");
     } else {
       setErrorText("");
     }
