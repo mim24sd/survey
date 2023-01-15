@@ -1,6 +1,5 @@
 import React from "react";
 import ButtonBox from "../../components/ButtonBox/index.jsx";
-import Questions from "../../components/PersonalInformation/index.jsx";
 import styles from "./styles/styles.module.scss";
 
 const MainLayout = ({ title, previousPath, nextPath, children }) => {

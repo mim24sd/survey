@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styles from "./styles/styles.module.scss";
 
-const TextInput = ({ label, minlength, isRequired = true }) => {
-  // let [inputStyle, setInputStyle] = useState(styles.input);
+const TextInput = ({ label, minLength, isRequired = true }) => {
   let [errorText, setErrorText] = useState("");
 
   const handleInputValue = (event) => {
@@ -21,7 +20,7 @@ const TextInput = ({ label, minlength, isRequired = true }) => {
       <input
         className={`${styles.input} ${errorText ? styles.error : ""}`}
         type="text"
-        minlength={minlength}
+        minLength={minLength}
         required
         onBlur={handleInputValue}
       />
@@ -33,7 +32,7 @@ const TextInput = ({ label, minlength, isRequired = true }) => {
       <input
         className={`${styles.input} ${errorText ? styles.error : ""}`}
         type="text"
-        minlength={minlength}
+        minLength={minLength}
         onBlur={handleInputValue}
       />
       {errorText && <p className={styles.errorText}>{errorText}</p>}
