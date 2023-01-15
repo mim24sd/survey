@@ -10,38 +10,25 @@ const TextInput = ({ label, minLength, isRequired = true }) => {
     if (textLength === 0) {
       setErrorText("Can't be empty.");
     } else if (textLength < { minLength }) {
-      setErrorText("Must be at least 2 characters Long");
+      setErrorText(`Must be at least ${minLength} characters Long`);
     } else {
       setErrorText("");
     }
   };
 
-  let textInput = isRequired ? (
+  return (
     <label className={styles.label}>
       {label}
       <input
         className={`${styles.input} ${errorText ? styles.error : ""}`}
         type="text"
         minLength={minLength}
-        required
-        onBlur={handleInputValue}
-      />
-      {errorText && <p className={styles.errorText}>{errorText}</p>}
-    </label>
-  ) : (
-    <label className={styles.label}>
-      {label}
-      <input
-        className={`${styles.input} ${errorText ? styles.error : ""}`}
-        type="text"
-        minLength={minLength}
+        required={isRequired}
         onBlur={handleInputValue}
       />
       {errorText && <p className={styles.errorText}>{errorText}</p>}
     </label>
   );
-
-  return textInput;
 };
 
 export default TextInput;
