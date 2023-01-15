@@ -9,10 +9,10 @@ const PersonalInformation = () => {
   section = (
     <ul className={styles.list}>
       <li>
-        <TextInput label="Name" minlength={2} />
+        <TextInput label="Name" minLength={2} />
       </li>
       <li>
-        <TextInput label="Family" minlength={2} />
+        <TextInput label="Family" minLength={2} />
       </li>
       <li>
         <DateInput label="Birth Date" />

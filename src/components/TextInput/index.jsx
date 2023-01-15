@@ -9,7 +9,7 @@ const TextInput = ({ label, minLength, isRequired = true }) => {
 
     if (textLength === 0) {
       setErrorText("Can't be empty.");
-    } else if (textLength < { minLength }) {
+    } else if (textLength < minLength) {
       setErrorText(`Must be at least ${minLength} characters Long`);
     } else {
       setErrorText("");
