@@ -21,7 +21,6 @@ const PersonalInformation = () => {
         [title]: value,
       },
     }));
-    console.log(_);
   }
 
   function setStates(title, value) {
