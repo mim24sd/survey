@@ -7,8 +7,10 @@ const TextInput = ({
   isRequired = true,
   value,
   onChange,
+  isValid,
 }) => {
   let [errorText, setErrorText] = useState("");
+
   const handleInputValue = (event) => {
     const textLength = event.target.value.length;
 
@@ -19,6 +21,8 @@ const TextInput = ({
     } else {
       setErrorText("");
     }
+
+    isValid(label, textLength !== 0 && textLength > minLength - 1);
   };
 
   return (

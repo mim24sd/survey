@@ -8,7 +8,12 @@ import "./styles.module.scss";
 
 const App = () => {
   const surveyInfo = useState({
-    user: { name: "", family: "", birthDate: "" },
+    personalInformation: {
+      name: "",
+      family: "",
+      birthDate: "",
+      isFormValid: false,
+    },
   });
 
   return (
