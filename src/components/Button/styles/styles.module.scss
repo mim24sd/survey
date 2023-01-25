@@ -11,4 +11,8 @@
   &.success {
     background-color: $tertiary-color;
   }
+
+  &.disable {
+    background-color: $quaternary-color;
+  }
 }

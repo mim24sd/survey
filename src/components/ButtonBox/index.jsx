@@ -9,10 +9,11 @@ const ButtonBox = ({
   nextButtonType,
   nextButtonText,
   nextPath,
+  isFormValid,
 }) => {
   let buttonBox = (
     <div className={styles.next_button}>
-      <Button type={nextButtonType} path={nextPath}>
+      <Button type={nextButtonType} path={nextPath} isFormValid={isFormValid}>
         {nextButtonText}
       </Button>
     </div>
@@ -21,10 +22,14 @@ const ButtonBox = ({
   if (previousPath !== undefined) {
     buttonBox = (
       <div className={styles.next_and_prev_button}>
-        <Button type={PreviousButtonType} path={previousPath}>
+        <Button
+          type={PreviousButtonType}
+          path={previousPath}
+          isFormValid={true}
+        >
           {PreviousButtonText}
         </Button>
-        <Button type={nextButtonType} path={nextPath}>
+        <Button type={nextButtonType} path={nextPath} isFormValid={isFormValid}>
           {nextButtonText}
         </Button>
       </div>
