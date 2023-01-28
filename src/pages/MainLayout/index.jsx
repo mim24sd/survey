@@ -4,7 +4,7 @@ import styles from "./styles/styles.module.scss";
 import SurveyInformation from "../../components/SurveyInformation/index.jsx";
 
 const MainLayout = ({ title, previousPath, nextPath, children }) => {
-  const [surveyInfo, _] = useContext(SurveyInformation);
+  const [surveyInfo] = useContext(SurveyInformation);
   let isFormValid = false;
   let nextButtonType = "primary";
   let nextButtonText = "Next";

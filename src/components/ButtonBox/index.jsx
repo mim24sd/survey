@@ -11,32 +11,28 @@ const ButtonBox = ({
   nextPath,
   isFormValid,
 }) => {
-  let buttonBox = (
-    <div className={styles.next_button}>
-      <Button type={nextButtonType} path={nextPath} isFormValid={isFormValid}>
+  const isEnabled = isFormValid;
+  let nextValidatedPath = isEnabled ? nextPath : null;
+  let wrapperStyle = previousPath
+    ? styles.next_and_prev_button
+    : styles.next_button;
+
+  return (
+    <div className={wrapperStyle}>
+      {previousPath && (
+        <Button type={PreviousButtonType} path={previousPath} isEnabled={true}>
+          {PreviousButtonText}
+        </Button>
+      )}
+      <Button
+        type={nextButtonType}
+        path={nextValidatedPath}
+        isEnabled={isEnabled}
+      >
         {nextButtonText}
       </Button>
     </div>
   );
-
-  if (previousPath !== undefined) {
-    buttonBox = (
-      <div className={styles.next_and_prev_button}>
-        <Button
-          type={PreviousButtonType}
-          path={previousPath}
-          isFormValid={true}
-        >
-          {PreviousButtonText}
-        </Button>
-        <Button type={nextButtonType} path={nextPath} isFormValid={isFormValid}>
-          {nextButtonText}
-        </Button>
-      </div>
-    );
-  }
-
-  return buttonBox;
 };
 
 export default ButtonBox;
