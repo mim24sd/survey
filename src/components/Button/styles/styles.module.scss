@@ -1,7 +1,7 @@
 @import "../../../assests/variables.module.scss";
 
 .button {
-  padding: $space-md $space-lg;
+  padding: $space-lg $space-xl;
   border-width: 0;
   border-radius: $space-md;
   color: $background-secondary-color;
@@ -10,5 +10,9 @@
 
   &.success {
     background-color: $tertiary-color;
+  }
+
+  &.disable {
+    background-color: $quaternary-color;
   }
 }

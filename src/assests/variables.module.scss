@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-$background-primary-color: #e6e6e6d9;
-$background-secondary-color: #ffffff;
-
 $primary-color: #008cba;
 $secondary-color: #f44336;
 $tertiary-color: #4caf50;
+$quaternary-color: #7c7f7c;
+
+$background-primary-color: #e6e6e6d9;
+$background-secondary-color: #ffffff;
+
+$border-primary-color: #b2b2b2;
 
 $size-unit: 1em;
 $size-sm: 0.5 * $size-unit;
@@ -13,7 +16,10 @@ $size-md: 1 * $size-unit;
 $size-lg: 2 * $size-unit;
 
 $space-unit: 4px;
+$space-xs: 0.25 * $space-unit;
+$space-sm: 0.5 * $space-unit;
 $space-md: 1 * $space-unit;
 $space-lg: 2 * $space-unit;
+$space-xl: 4 * $space-unit;
 
 $font-primary: "Roboto", sans-serif;

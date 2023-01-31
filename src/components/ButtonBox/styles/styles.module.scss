@@ -1,9 +1,13 @@
+@import "../../../assests/variables.module.scss";
+
 .next_button {
   display: flex;
   justify-content: end;
+  padding-top: $space-xl;
 }
 
 .next_and_prev_button {
   display: flex;
   justify-content: space-between;
+  padding-top: $space-xl;
 }

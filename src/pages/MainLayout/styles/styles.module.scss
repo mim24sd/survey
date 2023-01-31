@@ -2,12 +2,20 @@
 
 .main {
   background-color: $background-secondary-color;
-  width: 600px;
   padding: $size-lg;
   border-radius: $space-md;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .header {
   font-size: $size-lg;
   padding-bottom: $size-sm;
+}
+
+@media screen and (min-width: 450px) {
+  .main {
+    width: 600px;
+    min-height: min-content;
+  }
 }

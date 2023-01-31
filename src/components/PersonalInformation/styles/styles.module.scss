@@ -1,0 +1,7 @@
+@import "../../../assests/variables.module.scss";
+
+.list {
+  display: grid;
+  padding: $space-xl;
+  grid-gap: $space-lg;
+}
