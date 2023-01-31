@@ -5,6 +5,7 @@ import PersonalInformation from "./components/PersonalInformation/index.jsx";
 import MainLayout from "./pages/MainLayout/index.jsx";
 import SurveyInformation from "./components/SurveyInformation/index.jsx";
 import "./styles.module.scss";
+import ProgrammingLanguages from "./components/ProgrammingLanguages/index.jsx";
 
 const App = () => {
   const surveyInfo = useState({
@@ -13,6 +14,10 @@ const App = () => {
       family: "",
       birthDate: "",
       isFormValid: false,
+    },
+    programmingLanguages: {
+      languages: [],
+      isValid: false,
     },
   });
 
@@ -38,7 +43,9 @@ const App = () => {
                 title="Programming languages"
                 previousPath="/"
                 nextPath="/coding"
-              />
+              >
+                <ProgrammingLanguages />
+              </MainLayout>
             }
           />
           <Route
