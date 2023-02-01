@@ -1,0 +1,15 @@
+@import "../../../assests/variables.module.scss";
+
+.title {
+  font-size: $size-lg;
+  padding-bottom: $space-xl;
+}
+
+.item {
+  display: block;
+  padding: $space-lg;
+}
+
+.wrapper {
+  padding-bottom: $space-xl;
+}
