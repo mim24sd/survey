@@ -40,7 +40,7 @@ const PersonalInformation = () => {
       personalInformation: {
         ...prevUser.personalInformation,
         [label]: value,
-        isFormValid: isFormValid(),
+        isValid: isFormValid(),
       },
     }));
   }

@@ -18,6 +18,11 @@ const ProgrammingLanguages = () => {
   const [surveyInfo, setSurveyInfo] = useContext(SurveyInformation);
 
   function onChange(isChecked, language) {
+    const languages = programmingLanguageList(isChecked, language);
+    setProgrammingLanguages(languages);
+  }
+
+  function programmingLanguageList(isChecked, language) {
     let languages = surveyInfo.programmingLanguages.languages;
 
     if (isChecked) {
@@ -26,6 +31,10 @@ const ProgrammingLanguages = () => {
       languages = languages.filter((eachLanguage) => eachLanguage !== language);
     }
 
+    return languages;
+  }
+
+  function setProgrammingLanguages(languages) {
     setSurveyInfo((prevUser) => ({
       ...prevUser,
       programmingLanguages: {
@@ -36,7 +45,6 @@ const ProgrammingLanguages = () => {
   }
 
   function isValid(languages) {
-    console.log(languages.length);
     return languages.length > 0 ? true : false;
   }
 
