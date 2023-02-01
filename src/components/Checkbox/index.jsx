@@ -12,7 +12,7 @@ const Checkbox = ({ question, options, onChange }) => {
     <div className={styles.wrapper}>
       <h2 className={styles.title}>{question}</h2>
       {options.map((option) => (
-        <label className={styles.item}>
+        <label className={styles.item} key={option}>
           <input
             type="checkbox"
             onChange={(event) => handleChangeCheckbox(event)}
