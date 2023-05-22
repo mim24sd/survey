@@ -13,7 +13,7 @@ const App = () => {
       name: "",
       family: "",
       birthDate: "",
-      isFormValid: false,
+      isValid: false,
     },
     programmingLanguages: {
       languages: [],
