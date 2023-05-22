@@ -17,9 +17,9 @@ const ProgrammingLanguages = () => {
   const question = "Choose your programming language.";
   const [surveyInfo, setSurveyInfo] = useContext(SurveyInformation);
 
-  function onChange(isChecked, language, isValid) {
+  function onChange(isChecked, language) {
     const languages = programmingLanguageList(isChecked, language);
-    setProgrammingLanguages(languages, isValid);
+    setProgrammingLanguages(languages, languages.length);
   }
 
   function programmingLanguageList(isChecked, language) {

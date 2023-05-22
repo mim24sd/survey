@@ -6,11 +6,7 @@ const Checkbox = ({ question, options, required, onChange }) => {
     const isChecked = event.target.checked;
     const textInputValue = event.target.parentElement.textContent;
 
-    onChange(isChecked, textInputValue, isValid(textInputValue));
-  };
-
-  const isValid = (text) => {
-    return Boolean(text.length);
+    onChange(isChecked, textInputValue);
   };
 
   return (
