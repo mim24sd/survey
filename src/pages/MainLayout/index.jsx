@@ -5,14 +5,17 @@ import SurveyInformation from "../../components/SurveyInformation/index.jsx";
 
 const MainLayout = ({ title, previousPath, nextPath, children }) => {
   const [surveyInfo] = useContext(SurveyInformation);
-  let isFormValid = false;
+
+  let isValid = false;
   let nextButtonType = "primary";
   let nextButtonText = "Next";
   let PreviousButtonType = "primary";
   let PreviousButtonText = "Previous";
 
   if (nextPath === "/programming-languages") {
-    isFormValid = surveyInfo.personalInformation.isFormValid;
+    isValid = surveyInfo.personalInformation.isValid;
+  } else if (nextPath === "/coding") {
+    isValid = surveyInfo.programmingLanguages.isValid;
   } else if (nextPath === "/success") {
     nextButtonType = "success";
     nextButtonText = "Confirm";
@@ -31,7 +34,7 @@ const MainLayout = ({ title, previousPath, nextPath, children }) => {
         nextButtonType={nextButtonType}
         nextButtonText={nextButtonText}
         nextPath={nextPath}
-        isFormValid={isFormValid}
+        isValid={isValid}
       ></ButtonBox>
     </main>
   );

@@ -9,9 +9,9 @@ const ButtonBox = ({
   nextButtonType,
   nextButtonText,
   nextPath,
-  isFormValid,
+  isValid,
 }) => {
-  const isEnabled = isFormValid;
+  const isEnabled = isValid;
   let nextValidatedPath = isEnabled ? nextPath : null;
   let wrapperStyle = previousPath
     ? styles.next_and_prev_button
