@@ -1,11 +1,16 @@
 import React from "react";
 import styles from "./styles/styles.module.scss";
 
-const Checkbox = ({ question, options, onChange }) => {
+const Checkbox = ({ question, options, required, onChange }) => {
   const handleChangeCheckbox = (event) => {
     const isChecked = event.target.checked;
+    const textInputValue = event.target.parentElement.textContent;
 
-    onChange(isChecked, event.target.parentElement.textContent);
+    onChange(isChecked, textInputValue, isValid(textInputValue));
+  };
+
+  const isValid = (text) => {
+    return Boolean(text.length);
   };
 
   return (
@@ -15,6 +20,7 @@ const Checkbox = ({ question, options, onChange }) => {
         <label className={styles.item} key={option}>
           <input
             type="checkbox"
+            required={required}
             onChange={(event) => handleChangeCheckbox(event)}
           />
           <span>{option}</span>

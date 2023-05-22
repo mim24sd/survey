@@ -17,9 +17,9 @@ const ProgrammingLanguages = () => {
   const question = "Choose your programming language.";
   const [surveyInfo, setSurveyInfo] = useContext(SurveyInformation);
 
-  function onChange(isChecked, language) {
+  function onChange(isChecked, language, isValid) {
     const languages = programmingLanguageList(isChecked, language);
-    setProgrammingLanguages(languages);
+    setProgrammingLanguages(languages, isValid);
   }
 
   function programmingLanguageList(isChecked, language) {
@@ -34,24 +34,26 @@ const ProgrammingLanguages = () => {
     return languages;
   }
 
-  function setProgrammingLanguages(languages) {
+  function setProgrammingLanguages(languages, isValid) {
     setSurveyInfo((prevUser) => ({
       ...prevUser,
       programmingLanguages: {
         languages: languages,
-        isValid: isValid(languages),
+        isValid: isValid,
       },
     }));
-  }
 
-  function isValid(languages) {
-    return languages.length > 0 ? true : false;
+    console.log(surveyInfo);
   }
-
   return (
     <ul className={styles.list}>
       <li>
-        <Checkbox question={question} options={languages} onChange={onChange} />
+        <Checkbox
+          question={question}
+          options={languages}
+          required={true}
+          onChange={onChange}
+        />
       </li>
     </ul>
   );
