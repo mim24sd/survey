@@ -19,7 +19,7 @@ const ProgrammingLanguages = () => {
 
   function onChange(isChecked, language) {
     const languages = programmingLanguageList(isChecked, language);
-    setProgrammingLanguages(languages, languages.length);
+    setProgrammingLanguages(languages, !!languages.length);
   }
 
   function programmingLanguageList(isChecked, language) {
